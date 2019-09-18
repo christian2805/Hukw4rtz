@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="harry.css" />
+  </head>
+
+  <body>
+    <header class="menu">
+      <h1>All</h1>
+      <h2 id="list-length"></h2>
+      <nav id="filter_buttons">
+        <label>
+          <button class="filter" data-filter="all">All houses</button>
+          <button class="filter" data-filter="Hufflepuff">Hufflepuff</button>
+          <button class="filter" data-filter="Gryffindor">Gryffindor</button>
+          <button class="filter" data-filter="Ravenclaw">Ravenclaw</button>
+          <button class="filter" data-filter="Slytherin">Slytherin</button>
+        </label>
+      </nav>
+      <nav id="sorting_buttons">
+        <label>
+          Sort by:
+          <select id="sorting">
+            <option value="firstname">First name</option>
+            <option value="lastname">Last name</option>
+            <option value="gender">Gender</option>
+            <option value="house">House</option>
+          </select>
+        </label>
+      </nav>
+    </header>
+    <div id="popup">
+      <div id="indhold"></div>
+      <div id="luk">
+        <button>X</button>
+      </div>
+    </div>
+
+    <table id="list">
+      <thead>
+        <tr id="sorting">
+          <th data-sort="first_name">FIRST NAME</th>
+          <th data-sort="middle_name">MIDDLE NAME</th>
+          <th data-sort="last_name">LAST NAME</th>
+          <th data-sort="nick_name">NICK NAME</th>
+          <th data-sort="gender">GENDER</th>
+          <th data-sort="house">HOUSE</th>
+        </tr>
+      </thead>
+      <tbody id="student">
+        <!-- student template will be copied and inserted here -->
+      </tbody>
+    </table>
+
+    <template id="students">
+      <tr>
+        <td data-field="first_name">FIRST NAME</td>
+        <td data-field="middle_name">MIDDLE NAME</td>
+        <td data-field="last_name">LAST NAME</td>
+        <td data-field="nick_name">NICK NAME</td>
+        <td data-field="gender">GENDER</td>
+        <td data-field="house">HOUSE</td>
+        <td data-field="photo">photo</td>
+        <td><button data-action="remove">remove</button></td>
+      </tr>
+    </template>
+
+    <script src="harry.js"></script>
+  </body>
+</html>
